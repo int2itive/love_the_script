@@ -1,0 +1,228 @@
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+*, 
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+}
+
+h1, p {
+	text-align: center;
+	color: #0C0C0C;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.hero-section {
+	position: relative;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 5%;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 1.25rem;
+
+	li {
+		font-size: 12px;
+		text-transform: uppercase;
+
+		a {
+			color: currentColor;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		&:first-of-type a {
+			color: hsl(42, 54%, 49%);
+			font-weight: 700;
+		}
+	}
+}
+
+.lv--site-hero {
+	position: relative;
+	background-image: url(https://ik.imagekit.io/ghow2otb3rc/Projects/SoM/LovetheScript/asset%2010_deC5t1Ndd.jpeg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.lv--site-hero::after {
+	position: absolute;
+	inset: 0;
+	content: '';
+	height: 100%;
+	width: 100%;
+	background-color: hsl(0 0% 0% / 0.4);
+}
+
+.lv--ui-layer {
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+	z-index: 10;
+	color: #fff;
+	padding: 40px;
+}
+
+.lv--ui-layer > * {
+	position: relative;
+	z-index: 1;
+}
+
+.logo--wrap {
+	text-align: center;
+}
+
+nav {
+	margin-block-start: 2rem;
+	pointer-events: auto;
+}
+
+h1.hero-title {
+	font-size: 10rem;
+	margin: 10px 0;
+	line-height: 0.9;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	color: #fff;
+	background: none;
+	-webkit-text-fill-color: initial;
+	text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.social-links {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	pointer-events: auto;
+}
+
+.social-icon {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	color: #fff;
+	text-decoration: none;
+	backdrop-filter: blur(4px);
+}
+
+.social-icon svg {
+	fill: currentColor;
+}
+
+.search-icon {
+	font-size: 1.2rem;
+	cursor: pointer;
+	opacity: 0.8;
+	transition: opacity 0.3s;
+}
+
+.scroll-indicator {
+	position: absolute;
+	left: 50%;
+	bottom: 40px;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	opacity: 0.8;
+	pointer-events: auto;
+}
+
+.scroll-arrow {
+	width: 30px;
+	height: 30px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.lv--media-icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;	
+}
+
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+		position: relative;
+	}
+	.hero-section {
+		padding-left: 0;
+		align-items: center;
+		text-align: center;
+		margin-top: 40px;
+		justify-content: flex-start;
+	}
+	h1.hero-title {
+		font-size: clamp(3rem, 13vw, 5rem);
+		line-height: 0.9;
+		margin-bottom: 20px;
+	}
+	.search-icon {
+		position: absolute;
+		top: 5px;
+		right: 0;
+	}
+	.social-links {
+		margin-bottom: 0;
+	}
+	.scroll-indicator {
+		position: relative;
+		bottom: auto;
+		left: auto;
+		transform: none;
+		margin-top: 10px;
+	}
+	.lv--media-icons {
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+		padding-bottom: 30px;
+		gap: 30px;
+	}
+}
+
